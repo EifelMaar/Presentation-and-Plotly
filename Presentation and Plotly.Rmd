@@ -2,7 +2,7 @@
 title: "Presentation & Plotly"
 author: "Thorsten"
 date: "18 1 2020"
-output: html_document
+output: ioslides_presentation
 ---
 
 ```{r setup, include=FALSE}
