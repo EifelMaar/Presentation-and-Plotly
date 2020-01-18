@@ -1,0 +1,41 @@
+---
+title: "Presentation & Plotly"
+author: "Thorsten"
+date: "18 1 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libs, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(ggplot2)
+library(plotly)
+```
+## Economics
+
+
+```{r createplot, echo=FALSE, message=FALSE}
+
+plot_ly(economics, x = ~date, y = ~unemploy / pop)
+
+
+```
+
+&nbsp;
+&nbsp;
+
+## Air Passengers
+
+&nbsp;
+&nbsp;
+
+```{r showairplot, echo=FALSE, message=FALSE}
+#plotting a Boxplot with Sepal.Length variable and storing it in box_plot 
+data(AirPassengers)
+time_series<-plot_ly(x=time(AirPassengers),y=AirPassengers,type="scatter",mode="lines") #defining labels and titile using layout() 
+layout(time_series,title = "AirPassengers Dataset - Time Series Plot", xaxis = list(title = "Time"), yaxis = list(title = "Passengers"))
+```
+
